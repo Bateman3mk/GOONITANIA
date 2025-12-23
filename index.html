@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOONITANIA - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="brand-banner">GOONITANIA ARCHIVE</div>
+        <h1>GOONITANIA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservation.html">Submit</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>GOONITANIA - Mauritania Archives</h2>
+            <p id="local-greeting">Explore archival collections and community contributions from Nouakchott.</p>
+            <p id="local-time" aria-live="polite"></p>
+            <form class="search-form" action="#" onsubmit="return false;">
+                <input id="search-input" type="search" placeholder="Search the GOONITANIA archive" aria-label="Search the archive">
+                <button class="btn" onclick="document.getElementById('search-input').focus();">Search</button>
+            </form>
+        </section>
+        <section class="features" aria-label="features">
+            <h3 data-i18n="features.title">Featured Collections</h3>
+            <div class="cards">
+                <article class="card">
+                    <h4 data-i18n="features.vip">Visual Collections</h4>
+                    <p data-i18n="features.vip.desc">Photo libraries and event captures preserved for research.</p>
+                </article>
+                <article class="card">
+                    <h4 data-i18n="features.coaching">Oral Histories</h4>
+                    <p data-i18n="features.coaching.desc">Interviews and recorded memories from the community.</p>
+                </article>
+                <article class="card">
+                    <h4 data-i18n="features.events">Events & Collections</h4>
+                    <p data-i18n="features.events.desc">Event dossiers, community collections, and curated exhibits.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="gallery" aria-label="gallery">
+            <h3 data-i18n="gallery.title">Archive Gallery</h3>
+            <div class="gallery-grid">
+                <img src="https://source.unsplash.com/600x400/?mauritania" alt="Nouakchott"/>
+                <img src="https://source.unsplash.com/600x400/?archive" alt="archives"/>
+                <img src="https://source.unsplash.com/600x400/?history" alt="history"/>
+            </div>
+        </section>
+
+        <!-- Testimonials removed for archive-focused layout -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GOONITANIA Archive</p>
+        <p>Credits: GASTON &amp; ABOU LAY</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOONITANIA - Submit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="brand-banner">GOONITANIA ARCHIVE</div>
+        <h1>GOONITANIA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservation.html">Submit</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Submit to the GOONITANIA Archive</h2>
+            <p class="lead">Share a historic item, photo, audio or document. Files are kept locally in this demo; export metadata as JSON to save items.</p>
+        </section>
+
+        <section class="submission-grid">
+            <form class="booking-form" id="reservation-form" aria-labelledby="submit-title">
+                <h3 id="submit-title">New Archive Item</h3>
+
+                <label for="title">Item title</label>
+                <input type="text" id="title" name="title" placeholder="Short descriptive title" required>
+
+                <label for="contributor">Contributor name</label>
+                <input type="text" id="contributor" name="contributor" placeholder="Your name" required>
+
+                <label for="date">Item date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="photo">Photo</option>
+                    <option value="audio">Audio</option>
+                    <option value="document">Document</option>
+                    <option value="video">Video</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="description">Short description</label>
+                <textarea id="description" name="description" rows="4" placeholder="Context, date, location, people..."></textarea>
+
+                <label for="file">File (optional)</label>
+                <input type="file" id="file" name="file" accept="image/*,audio/*,video/*,.pdf">
+
+                <div style="display:flex;gap:10px;align-items:center;margin-top:8px;">
+                    <button type="submit" class="btn">Submit item</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+
+            <div class="archives-list">
+                <h3>Submitted Items</h3>
+                <div class="actions" style="margin-bottom:8px;">
+                    <button id="export-btn" class="btn">Export JSON</button>
+                    <button id="clear-btn">Clear All</button>
+                </div>
+                <table id="archives-table" aria-live="polite">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Contributor</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <p id="no-items" style="color:#666;margin-top:8px;">No items yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GOONITANIA Archive</p>
+        <p>Credits: GASTON &amp; ABOU LAY</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
